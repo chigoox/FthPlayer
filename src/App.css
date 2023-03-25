@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: black;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 189, 189);
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(26, 26, 32);
+}
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+
+*{
+font-family: 'Megrim', cursive;
+
+}
+
+.otherText{
+  font-family: 'Rajdhani', cursive;
+}
+
+
+.headerText {
+  font-family: 'Libre Barcode 39 Text',
+    cursive;
+
+}
+
+/* 
+
+font-family: 'Gamja Flower',
+cursive;
+font-family: 'Italianno',
+cursive;
+font-family: 'Libre Barcode 39 Text',
+cursive;
+font-family: 'Megrim',
+cursive;
+font-family: 'Reenie Beanie',
+cursive;
+
+
+
+*/
+
+.fontxxx{
+  font-family: 'Yellowtail', cursive;
+}
+
+
+
+.circle-wrap {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+
+.circle-wrap .circleP .mask,
+.circle-wrap .circleP .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.circle-wrap .circleP .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circleP .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  
+}
+
+.circle-wrap .circleP .mask.full,
+.circle-wrap .circleP .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(180deg);
+}
+
+
+.bg-black-900{
+
+  background-color: #070707;
+}
+.bg-black-800 {
+
+  background-color: #131313;
+}
+
+
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 0;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+
+
+.trans-slow-2x {
+  transition: all 2000ms ease-in-out;
+}
+
+.trans-slow {
+  transition: all 1000ms ease-in-out;
+}
+
+.trans-mid {
+  transition: all 750ms ease-in-out;
+}
+
+.trans {
+  transition: all 500ms ease-in-out;
+}
+
+.trans-fast {
+  transition: all 100ms ease-in-out;
+}
+
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
