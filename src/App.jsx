@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <div className="App h-screen bg-black">
+    <div className="App h-screen bg-black flex flex-col justify-between">
 
 
       {/* PAGES */}
