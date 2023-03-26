@@ -122,9 +122,21 @@ cursive;
 
   background-color: #070707;
 }
-.bg-black-800 {
 
+
+.border-black-900 {
+
+  border-color: #070707;
+}
+
+.bg-black-800{
   background-color: #131313;
+}
+
+
+.border-black-800{
+
+  border-color: #131313;
 }
 
 

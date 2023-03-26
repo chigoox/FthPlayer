@@ -1,22 +1,32 @@
 import { useEffect, useState } from 'react'
-import { AiOutlineMenu, AiOutlineClose, AiFillFacebook, AiFillHome } from "react-icons/ai";
-import { BsFillPersonFill, BsNewspaper } from 'react-icons/bs'
-import { MdAttachMoney } from 'react-icons/md'
-import { RiFilePaperFill } from 'react-icons/ri'
+
+
 import './App.css'
 import Menu from './componets/Menu';
+import AddMenu from './componets/MenuItems/AddMenu';
 import Player from './componets/Player/Player';
 import Home from './Pages/Home';
 
 function App() {
+  const [menuSelected, setMenuSelected] = useState({ All: true })
+  const toggleMenuSelected = (menuItem) => { setMenuSelected({ [menuItem]: true }) }
+  console.log(menuSelected)
+
+
 
 
   return (
     <div className="App h-screen bg-black flex flex-col justify-between relative overflow-hidden">
 
+      {/* MENUES */}
+
+      <Menu
+        toggleMenuSelected={toggleMenuSelected}
+        menuSelected={menuSelected}
+      />
+      {menuSelected.Add && <AddMenu toggleMenuSelected={toggleMenuSelected} menuSelected={menuSelected} />}
 
       {/* PAGES */}
-      <Menu />
       <Home />
 
 

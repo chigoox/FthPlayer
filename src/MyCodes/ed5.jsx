@@ -26,7 +26,7 @@ export function handleInput5(key, value, stateSetter) {
 
 
 
-export async function addToDatabase(collection, Doc, field, data) {
+async function addMusic(collection, Doc, field, data) {
 
 
     await setDoc(doc(DATABASE, collection, Doc), {
@@ -47,7 +47,7 @@ export const getRand = (max) => { return Math.floor(Math.random() * max) + 1; }
 
 
 
-async function fetchDocument(collection, document, setterfunction) {
+async function FetchMusic(collection, document, setterfunction) {
     const docRef = doc(DATABASE, collection, document);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -59,4 +59,4 @@ async function fetchDocument(collection, document, setterfunction) {
 }
 
 
-export { fetchDocument }
+export { FetchMusic, addMusic }
